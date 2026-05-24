@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/noimg/AP1400-2-HW/AP1400-2-HW1/build",
+  "command": "/usr/bin/g++  -I/home/noimg/AP1400-2-HW/AP1400-2-HW1/include -g -std=gnu++17 -o CMakeFiles/main.dir/src/main.cpp.o -c /home/noimg/AP1400-2-HW/AP1400-2-HW1/src/main.cpp",
+  "file": "/home/noimg/AP1400-2-HW/AP1400-2-HW1/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/noimg/AP1400-2-HW/AP1400-2-HW1/build",
+  "command": "/usr/bin/g++  -I/home/noimg/AP1400-2-HW/AP1400-2-HW1/include -g -std=gnu++17 -o CMakeFiles/main.dir/src/hw1.cpp.o -c /home/noimg/AP1400-2-HW/AP1400-2-HW1/src/hw1.cpp",
+  "file": "/home/noimg/AP1400-2-HW/AP1400-2-HW1/src/hw1.cpp",
+  "output": "CMakeFiles/main.dir/src/hw1.cpp.o"
+},
+{
+  "directory": "/home/noimg/AP1400-2-HW/AP1400-2-HW1/build",
+  "command": "/usr/bin/g++  -I/home/noimg/AP1400-2-HW/AP1400-2-HW1/include -g -std=gnu++17 -o CMakeFiles/main.dir/src/unit_test.cpp.o -c /home/noimg/AP1400-2-HW/AP1400-2-HW1/src/unit_test.cpp",
+  "file": "/home/noimg/AP1400-2-HW/AP1400-2-HW1/src/unit_test.cpp",
+  "output": "CMakeFiles/main.dir/src/unit_test.cpp.o"
+}
+]

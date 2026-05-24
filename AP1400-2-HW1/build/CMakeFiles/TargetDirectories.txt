@@ -1,0 +1,3 @@
+/home/noimg/AP1400-2-HW/AP1400-2-HW1/build/CMakeFiles/main.dir
+/home/noimg/AP1400-2-HW/AP1400-2-HW1/build/CMakeFiles/edit_cache.dir
+/home/noimg/AP1400-2-HW/AP1400-2-HW1/build/CMakeFiles/rebuild_cache.dir
