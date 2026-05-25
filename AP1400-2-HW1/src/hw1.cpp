@@ -175,4 +175,127 @@ namespace algebra
         }
         return det;
     }
+
+    Matrix inverse(const Matrix& matrix)
+    {
+        int n = matrix.size();
+        if (n == 0)
+            return matrix;
+        if (n != matrix[0].size())
+            throw std::logic_error("matrix must be square");
+        
+        double det = determinant(matrix);
+        if (det == 0)
+            throw std::logic_error("singular matrices have no inverse");
+
+        Matrix inv = zeros(n, n);
+        for (int i = 0; i < n; ++i)
+        {
+            for (int j = 0; j < n; ++j)
+            {
+                int sign = ((i + j) % 2) ? -1 : 1;
+                Matrix m = minor(matrix, j, i);
+
+                double cofactor = sign * determinant(m);
+                inv[i][j] = cofactor / det;
+            }
+        }
+        return inv;
+    }
+
+    Matrix concatenate(const Matrix& matrix1, const Matrix& matrix2, int axis)
+    {
+        int m1, n1, m2, n2;
+        m1 = matrix1.size();
+        n1 = matrix1[0].size();
+        m2 = matrix2.size();
+        n2 = matrix2[0].size();
+
+        Matrix cat;
+        if (axis == 0)
+        {
+            if (n1 != n2)
+                throw std::logic_error("matrices have wrong dimensions");
+            
+            cat = zeros(m1 + m2, n1);
+            for (int i = 0; i < m1 + m2; ++i)
+                for (int j = 0; j < n1; ++j)
+                    cat[i][j] = i < m1 ? matrix1[i][j] : matrix2[i - m1][j];
+
+        }
+        else if (axis == 1)
+        {
+            if (m1 != m2)
+                throw std::logic_error("matrices have wrong dimensions");
+
+            cat = zeros(m1, n1 + n2);
+            for (int i = 0; i < m1; ++i)
+                for (int j = 0; j < n1 + n2; ++j)
+                    cat[i][j] = j < n1 ? matrix1[i][j] : matrix2[i][j - n1];
+        }
+        return cat;
+    }
+
+    Matrix ero_swap(const Matrix& matrix, size_t r1, size_t r2)
+    {
+        int m, n;
+        m = matrix.size();
+        n = matrix[0].size();
+
+        if (!(r1 < m && r2 < m))
+            throw std::logic_error("inputs are out of range");
+
+        Matrix swap(matrix);
+
+        swap[r1] = matrix[r2];
+        swap[r2] = matrix[r1];
+
+        return swap;
+    }
+
+    Matrix ero_multiply(const Matrix& matrix, size_t r, double c)
+    {
+        Matrix mul(matrix);
+        int n = matrix[0].size();
+
+        for (int i = 0; i < n; ++i)
+            mul[r][i] *= c;
+
+        return mul;
+    }
+
+    Matrix ero_sum(const Matrix& matrix, size_t r1, double c, size_t r2)
+    {
+        Matrix sum(matrix);
+        int n = matrix[0].size();
+
+        for (int i = 0; i < n; ++i)
+            sum[r2][i] += matrix[r1][i] * c;
+
+        return sum;
+    }
+
+    Matrix upper_triangular(const Matrix& matrix)
+    {
+        if (matrix.empty())
+            return matrix;
+        
+        int n = matrix.size();
+        if (n != matrix[0].size())
+            throw std::logic_error("matrix must be square");
+
+        Matrix upp(matrix);
+        for (int i = 0; i < n - 1; ++i)
+        {
+            if (upp[i][i] == 0)
+                upp = ero_swap(upp, i, i+1);
+
+            for (int j = i + 1; j < n; ++j)
+            {
+                double f = - upp[j][i] / upp[i][i];
+                upp = ero_sum(upp, i, f, j);
+            }
+        }
+        return upp;
+    }
 }

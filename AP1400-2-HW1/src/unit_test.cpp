@@ -212,7 +212,7 @@ TEST(HW1Test, DETERMINANT2) {
     Matrix matrix{{1, 1.5, -1.75, 2}, {2, 2.5, -2.75, 3}, {3, 3.5, -3.75, 4}, {4, 4.5, 4.75, 5}};
     EXPECT_DOUBLE_EQ(algebra::determinant(matrix), 0);
 }
-/*
+
 TEST(HW1Test, INVERSE1) {
     // Caution: inverse of an empty matrix
     EXPECT_TRUE(algebra::inverse(Matrix{}).empty());
@@ -360,7 +360,7 @@ TEST(HW1Test, BONUS) {
     EXPECT_NEAR(res2[2][1], 0, 0.03);
     EXPECT_NEAR(res2[2][2], 39/4.0, 0.03);
 }
-*/
+
 
 
 
