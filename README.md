@@ -2,6 +2,12 @@
 
 [Amirkabir University of Technology 1400-2: Advanced Programming Course](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/AUT1400/)
 
+## Homework Details
+
+HW2: Install openssl
+
+
+
 ## Setup
 
 1. **Install WSL**
@@ -76,3 +82,22 @@ RUNNING TESTS ...
 ## Others
 
 WSL 网络镜像
+
+create a `.wslconfig` file in `%USERPROFILE%`
+
+Add the following lines:
+
+```ini
+[wsl2]
+networkingMode=mirrored
+```
+
+restart WSL
+
+```cmd
+wsl --shutdown
+```
+
+Known Caveats, better ways?
+
+
