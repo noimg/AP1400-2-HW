@@ -4,7 +4,18 @@
 
 ## Homework Details
 
-HW2: Install openssl
+### HW1
+
+`upper_triangular` bonus question: swap the adjacent rows if find $0$ on main diagonal
+
+### HW2
+
+Install OpenSSL (Required in CMakeLists)
+
+For Server Class:
+
+- `void show_wallets`: to avoid add `friend` in Server class, use pointer to get the private variable `clients`;
+- `bool parse_trx`: static member function, references;
 
 
 
@@ -99,5 +110,4 @@ wsl --shutdown
 ```
 
 Known Caveats, better ways?
-
 
