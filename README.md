@@ -2,6 +2,8 @@
 
 [Amirkabir University of Technology 1400-2: Advanced Programming Course](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/AUT1400/)
 
+Reference: https://github.com/Daniel741312/AUT-1400/
+
 ## Homework Details
 
 ### HW1
@@ -12,12 +14,19 @@
 
 Install OpenSSL (Required in CMakeLists)
 
-For Server Class:
+Server Class:
 
 - `void show_wallets`: to avoid add `friend` in Server class, use pointer to get the private variable `clients`;
 - `bool parse_trx`: static member function, references;
 
+### HW3
 
+BST Class:
+
+- use a sentinel node as `root`, `root->value` is number of nodes, `root->left` is the actual tree
+- use double pointer to implement `add`, `find`, other efficient ways?
+- `BST::find_successor`: is actually find predecessor (from unit-test)
+- not familiar with copy constructor, move constructor
 
 ## Setup
 
