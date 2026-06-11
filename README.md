@@ -2,7 +2,8 @@
 
 [Amirkabir University of Technology 1400-2: Advanced Programming Course](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/AUT1400/)
 
-Reference: https://github.com/Daniel741312/AUT-1400/
+referred to: https://github.com/Daniel741312/AUT-1400/
+and with the help of AI
 
 ## Homework Details
 
@@ -27,6 +28,19 @@ BST Class:
 - use double pointer to implement `add`, `find`, other efficient ways?
 - `BST::find_successor`: is actually find predecessor (from unit-test)
 - not familiar with copy constructor, move constructor
+
+### HW4
+
+Unique_ptr
+
+- not quite understand `make_unique`
+
+Shared_ptr
+
+- not quite understand `make_shared`
+- define pointer `int* count`
+- `*count++` is parsed as `*(count++)`, so we need `(*count)++`
+- check if `count` is `nullptr` before dereference it
 
 ## Setup
 
