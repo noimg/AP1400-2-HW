@@ -42,6 +42,13 @@ Shared_ptr
 - `*count++` is parsed as `*(count++)`, so we need `(*count)++`
 - check if `count` is `nullptr` before dereference it
 
+### HW5
+
+Espresso Based:
+
+- `brew()` done by AI
+- not quite understand deep copy
+
 ## Setup
 
 1. **Install WSL**
