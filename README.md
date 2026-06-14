@@ -1,3 +1,5 @@
+[TOC]
+
 ## Overview
 
 [Amirkabir University of Technology 1400-2: Advanced Programming Course](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/AUT1400/)
@@ -51,7 +53,7 @@ Espresso Based:
 
 ### HW6
 
-- not familiar with STL, almost AI assisted
+- not familiar with STL and file processing , almost AI assisted
 
 ### HW7
 
