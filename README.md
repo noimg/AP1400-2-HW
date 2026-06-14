@@ -90,9 +90,18 @@ Espresso Based:
 
 ## Configuration and Test
 
-1. Open WSL and clone AP1400-2 repository.
+1. Clone AP1400-2 repository.
 
-2. Configure CMake: choose GCC 13.2.1 x86_64-pc-linux-gnu. Or manually, `Ctrl+Shift+p`,  `>Cmake: Configure`  (might be redundant)
+2. Configure CMake
+
+    - If the repositories in ubuntu, vscode will automatically configure cmake, choose GCC 13.2.1 x86_64-pc-linux-gnu, or manually check: `Ctrl+Shift+p`,  `>Cmake: Configure` 
+
+    - If the repositories in windows, open wsl shell, manually run
+
+    	```
+    	mkdir build
+    	cmake ..
+    	```
 
 3. To test, turn to `main.cpp` and make `false` to run unit-tests.
 
@@ -105,13 +114,8 @@ Espresso Based:
     cd build
     cmake ..
     make
+    ./main
     ```
-
-After successfully building,
-
-```
-./main
-```
 
 Expected example:
 
@@ -151,3 +155,12 @@ wsl --shutdown
 
 Known Caveats, better ways?
 
+---
+
+We can also put the repositories in windows system. In ubuntu, windows files are at like `/mnt/c`, `/mnt/d`
+
+so we don't need vscode wsl extension?
+
+but compiling cmake in windows is slower
+
+I'm not quite understand this field of knowledge
