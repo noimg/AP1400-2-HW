@@ -49,6 +49,16 @@ Espresso Based:
 - `brew()` done by AI
 - not quite understand deep copy
 
+### HW6
+
+- not familiar with STL, almost AI assisted
+
+### HW7
+
+- `areSimilar` is kind of interesting
+
+- skip `daemon_figure.py`, I don't like matplotlib
+
 ## Setup
 
 1. **Install WSL**
